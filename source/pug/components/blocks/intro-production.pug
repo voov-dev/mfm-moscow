@@ -1,0 +1,30 @@
+mixin intro-production()
+  section.section
+    .container
+      h2.section__title.section__title--center.title!= "Наше производство"
+      .swiper.section__swiper-production
+        .swiper-wrapper
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "our-production-1", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "our-production-2", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "our-production-3", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "our-production-4", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "our-production-5", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "our-production-6", "jpg", 167, 140, "Наше производство")
+        .swiper-button-prev
+          +icon("icon-left", 15, 15)
+        .swiper-button-next
+          +icon("icon-right", 15, 15)
+
+

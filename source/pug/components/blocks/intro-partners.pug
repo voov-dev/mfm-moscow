@@ -1,0 +1,47 @@
+mixin intro-partners()
+  section.section
+    .container
+      h2.section__title.section__title--center.title!= "Партнеры, которые нам доверяют"
+      p.section__subtitle!= "«Московская Фабрика Мебели» (МФМ) уже изготовила и нанесла логотипы для:"
+      .swiper.section__swiper-production
+        .swiper-wrapper
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "pairs-1", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "pairs-2", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "pairs-3", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "pairs-4", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "pairs-5", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "pairs-6", "jpg", 167, 140, "Наше производство")
+          .swiper-slide
+            .section__production-slide
+              +picture("slides", "pairs-7", "jpg", 167, 140, "Наше производство")
+        .swiper-button-prev
+          +icon("icon-left", 15, 15)
+        .swiper-button-next
+          +icon("icon-right", 15, 15)
+
+      p.section__subtitle!= "Благодаря многофункциональности швейного цеха мы можем предложить вам услуги по пошиву, раскрою, разработки лекал для любых видов ткани и материалов."
+      h3.section__title.section__title--center.title.title--thin!= "Партнеры, которые нам доверяют"
+      .partnership
+        ul.partnership__items
+          li.partnership__item!= "Госучреждениям"
+          li.partnership__item!= "Школам, ВУЗам, СУЗам"
+          li.partnership__item!= "Танцевальным коллективам"
+          li.partnership__item!= "Ателье"
+          li.partnership__item!= "Гостиницам, ресторанам"
+          li.partnership__item!= "Охранным организациям"
+          li.partnership__item!= "Спортивным клубам"
+          li.partnership__item!= "Рекламным агентствам"
+          li.partnership__item!= "Швейным организациям, занимающимся пошивом спецодежды"
+

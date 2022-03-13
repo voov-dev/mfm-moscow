@@ -2,6 +2,9 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
+import {initMainNav} from './modules/main-nav';
+import {initBurgers} from './modules/burger';
+import {initVideo} from './modules/video';
 
 // ---------------------------------
 
@@ -21,6 +24,41 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
+    initMainNav();
+    initBurgers();
+    initVideo();
+
+    let introSwiper = document.querySelector('.intro .swiper');
+    if (introSwiper) {
+      // eslint-disable-next-line no-undef
+      introSwiper = new Swiper('.intro .swiper', {
+        slideActiveClass: 'is-active',
+        grabCursor: false,
+        loop: true,
+        speed: 1000,
+        autoplay: {
+          delay: 12000,
+        },
+        effect: 'creative',
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: ['-20%', 0, -1],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        },
+        navigation: {
+          nextEl: '.intro .intro__btn.intro__btn--next',
+          prevEl: '.intro .intro__btn.intro__btn--prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    }
   });
 });
 

@@ -1,0 +1,44 @@
+mixin intro-working()
+  section.section.steps
+    .container
+      h2.section__title.section__title--center.title!= "Наше производство"
+      ul.steps__list
+        li.steps__item
+          .steps__item-inner
+            steps__figure
+              .advantage__icon.icon.icon-1
+            span.steps__text!= "Что бы сделать заказ, необходимо связаться с менеджером."
+            span.steps__link
+              a(href="tel:84994724326").step__sublink.sublink
+                span.sublink__icon.icon.icon-12
+                span.visually-hidden!= "8 (499) 472-4326"
+              a(href="tel:84994724326").step__sublink.sublink
+                span.sublink__icon.icon.icon-13
+                span.visually-hidden!= "8 (499) 472-4326"
+        li.steps__item
+          .steps__item-inner
+            steps__figure
+              .advantage__icon.icon.icon-2
+            span.steps__text!= "Прислать изображение с указанием размера вышивки, вида ткани и нужного количества экземпляров."
+        li.steps__item
+          .steps__item-inner
+            steps__figure
+              .advantage__icon.icon.icon-3
+            span.steps__text!= "Менеджеры в кратчайшие сроки рассчитают стоимость заказа. "
+        li.steps__item
+          .steps__item-inner
+            steps__figure
+              .advantage__icon.icon.icon-4
+            span.steps__text!= "Дизайнеры разработают программу для вышивальной машины и отошьют контрольный образец."
+        li.steps__item
+          .steps__item-inner
+            steps__figure
+              .advantage__icon.icon.icon-5
+            span.steps__text!= "После согласования качества, стоимости и других нюансов, заказ отправляется в производство. "
+        li.steps__item
+          .steps__item-inner
+            steps__figure
+              .advantage__icon.icon.icon-6
+            span.steps__text!= "Каждый экземпляр проходит строгий контроль, после чего заказчик получает качественно вышитые изделия и радуется результату."
+
+      +btn({text: "Оставить заявку"})(data-open-modal="feedback")

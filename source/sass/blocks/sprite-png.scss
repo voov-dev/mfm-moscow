@@ -1,0 +1,89 @@
+// Использовал
+// https://jcthepants.github.io/Retina-CSS-Sprite-Generator/
+
+.icon {
+  background: url("../img/sprite/sprite.png") no-repeat top left;
+  width: 50px;
+  height: 50px;
+}
+
+.icon.icon-1 {
+  background-position: 0 0;
+}
+
+.icon.icon-2 {
+  background-position: 0 -51px;
+}
+
+.icon.icon-3 {
+  background-position: 0 -102px;
+}
+
+.icon.icon-4 {
+  background-position: 0 -153px;
+}
+
+.icon.icon-5 {
+  background-position: 0 -204px;
+}
+
+.icon.icon-6 {
+  background-position: 0 -255px;
+}
+
+.icon.icon-7 {
+  background-position: 0 -306px;
+}
+
+.icon.icon-8 {
+  background-position: 0 -357px;
+}
+
+.icon.icon-9 {
+  background-position: 0 -408px;
+}
+
+.icon.icon-10 {
+  background-position: 0 -459px;
+}
+
+.icon.icon-11 {
+  background-position: 0 -510px;
+}
+
+.icon.icon-12 {
+  background-position: 0 -561px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon.icon-13 {
+  background-position: 0 -582px;
+  width: 21px;
+  height: 21px;
+}
+
+.icon.icon-14 {
+  background-position: 0 -604px;
+  width: 29px;
+  height: 16px;
+}
+
+.icon.icon-15 {
+  background-position: 0 -621px;
+  width: 27px;
+  height: 27px;
+}
+
+.icon.icon-16 {
+  background-position: 0 -649px;
+  width: 42px;
+  height: 43px;
+}
+
+@include retina {
+  .icon {
+    background: url("../img/sprite/sprite@2x.png") no-repeat top left;
+    background-size: 50px 693px;
+  }
+}

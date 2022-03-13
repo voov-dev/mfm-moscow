@@ -1,3 +1,29 @@
 mixin footer(footerMods)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Главная"
+      }
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        if(currentUrl === "index.html")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          span.header__logo.logo
+            span.logo__band
+              +img("svg", "logo", "svg", 150, 74, "Московская фабрика мебели").logo__img
+              span.logo__name!= "Московская фабрика мебели"
+            span.logo__subtitle!= "Швейный цех"
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную").logo
+            span.logo__band
+              +img("svg", "logo", "svg", 150, 74, "Московская фабрика мебели").logo__img
+              span.logo__name!= "Московская фабрика мебели"
+            span.logo__subtitle!= "Швейный цех"
+        +btn({text: "Написать нам"})(data-open-modal="feedback")
+        a(href="https://galaxydesign.ru/", target="_blank").sublink
+          span.sublink__icon.icon.icon-16
+          span.sublink__text!= "Создание сайта студия «Галактика»"

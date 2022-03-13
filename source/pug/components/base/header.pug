@@ -4,33 +4,31 @@ mixin header(headerMods, currentUrl)
       {
         href: "index.html",
         text: "Главная"
-      },
-      {
-        href: "#",
-        text: "Страница 2"
-      },
-      {
-        href: "#",
-        text: "Страница 3"
-      },
+      }
     ]
 
   header.header(class=headerMods)
-    .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+    .container.header__inner
+      .header__parts
+        .header__left
+          if(currentUrl === "index.html")
+            //- lighthouse снимает 10 баллов SEO за <a> без href
+            span.header__logo.logo
+              span.logo__band
+                +img("svg", "logo", "svg", 150, 74, "Московская фабрика мебели").logo__img
+                span.logo__name!= "Московская фабрика мебели"
+              span.logo__subtitle!= "Швейный цех"
+          else
+            a.header__logo(href="index.html", aria-label="Переход на главную").logo
+              span.logo__band
+                +img("svg", "logo", "svg", 150, 74, "Московская фабрика мебели").logo__img
+                span.logo__name!= "Московская фабрика мебели"
+              span.logo__subtitle!= "Швейный цех"
+        .header__right
+          a(href="mailto:zakaz@mfm-moscow.ru").header__phone
+            +icon("icon-mail", 15, 15)
+            span!= "zakaz@mfm-moscow.ru"
+          a(href="tel:84994724326").header__phone
+            +icon("icon-phone", 15, 15)
+            span!= "8 (499) 472-4326"
+        +main-nav('0').header__main-nav
