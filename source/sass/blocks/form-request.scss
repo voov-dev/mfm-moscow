@@ -1,0 +1,29 @@
+.form-request {
+  $block-name: &; // #{$block-name}__element
+
+  &__btn {
+    display: flex;
+    min-width: 210px;
+    margin: 0 auto;
+  }
+
+  &--order {
+    #{$block-name}__btn {
+      margin-top: 25px;
+    }
+
+    #{$block-name}__custom-toggle {
+      margin-top: 10px;
+    }
+  }
+
+  &--air {
+    #{$block-name}__custom-input {
+      padding-bottom: 20px;
+    }
+
+    #{$block-name}__btn {
+      margin-top: 10px;
+    }
+  }
+}

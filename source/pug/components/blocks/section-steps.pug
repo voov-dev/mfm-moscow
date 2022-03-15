@@ -1,0 +1,58 @@
+mixin section-steps()
+  section.section.section--steps.section--noise-grey
+    .container
+      .section__intro
+        h2.section__title.section__title--center!= "Как мы работаем"
+      ol.steps
+        li.steps__item
+          .steps__box
+            .steps__inner
+              span.steps__icon-box
+                span.steps__icon.sprite-icon.sprite-icon-6
+              .steps__content
+                p.steps__text!= "Что бы сделать заказ, необходимо связаться с менеджером."
+                .steps__links
+                  a(href="https://vk.com/mfm.moscow", target="_blank").link.link--sprite-icon
+                    span.link__sprite-icon.sprite-icon.sprite-icon-12
+                    span.visually-hidden!= "Присоединиться к чату в Whatsapp"
+                  a(href="tel:84994724326").social.link--sprite-icon
+                    span.link__sprite-icon.sprite-icon.sprite-icon-13
+                    span.visually-hidden!= "Присоединиться к чату в Viber"
+        li.steps__item
+          .steps__box
+            .steps__inner
+              span.steps__icon-box
+                span.steps__icon.sprite-icon.sprite-icon-7
+              .steps__content
+                p.steps__text!= "Прислать изображение с указанием размера вышивки, вида ткани и нужного количества экземпляров."
+        li.steps__item
+          .steps__box
+            .steps__inner
+              span.steps__icon-box
+                span.steps__icon.sprite-icon.sprite-icon-8
+              .steps__content
+                p.steps__text!= "Менеджеры в кратчайшие сроки рассчитают стоимость заказа."
+        li.steps__item
+          .steps__box
+            .steps__inner
+              span.steps__icon-box
+                span.steps__icon.sprite-icon.sprite-icon-9
+              .steps__content
+                p.steps__text!= "Дизайнеры разработают программу для вышивальной машины и отошьют контрольный образец."
+        li.steps__item
+          .steps__box
+            .steps__inner
+              span.steps__icon-box
+                span.steps__icon.sprite-icon.sprite-icon-10
+              .steps__content
+                p.steps__text!= "После согласования качества, стоимости и других нюансов, заказ отправляется в производство. "
+        li.steps__item
+          .steps__box
+            .steps__inner
+              span.steps__icon-box
+                span.steps__icon.sprite-icon.sprite-icon-11
+              .steps__content
+                p.steps__text!= "Каждый экземпляр проходит строгий контроль, после чего заказчик получает качественно вышитые изделия и радуется результату."
+
+      +btn({text: "Оставить заявку"})(data-open-modal="request").section__btn
+    span.section__line-decor.section__line-decor--light

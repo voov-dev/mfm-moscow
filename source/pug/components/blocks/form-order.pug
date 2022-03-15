@@ -1,7 +1,0 @@
-mixin form-order()
-  .form-order(data-validate)&attributes(attributes)
-    form(method="post").form-order__form
-      +custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")
-      +custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")
-      +custom-toggle({inputLabel: "Даю согласие,на обработку персональных данных", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
-      +btn({text: "Оставить заявку", type: "submit"})

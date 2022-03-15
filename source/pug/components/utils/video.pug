@@ -12,5 +12,6 @@ mixin video(idVideo, alt, mods)
       picture
         source(srcset="https://i.ytimg.com/vi_webp/" + idVideo + "/maxresdefault.webp", type="image/webp")
         img.video__media(src="https://i.ytimg.com/vi/" + idVideo + "/maxresdefault.jpg", width=1280, height=720, alt=alt)
+      block
     button.video__button(aria-label="Запустить видео")
       +icon("icon-play").video__button-icon

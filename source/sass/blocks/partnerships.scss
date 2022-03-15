@@ -1,0 +1,18 @@
+.partnerships {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  &__item {
+    display: inline-flex;
+    margin: 10px 13px;
+    padding: 15px 18px 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    color: $color-coral-red;
+    background-color: $color-default-white;
+    border-radius: 15px;
+  }
+}

@@ -5,15 +5,29 @@ import {initFormValidate} from './modules/form/init-form-validate';
 import {initMainNav} from './modules/main-nav';
 import {initBurgers} from './modules/burger';
 import {initVideo} from './modules/video';
-
+import {initAutoResizeTextarea} from './modules/form/auto-resize-textarea';
+import {initMap} from './modules/map';
+import lightGallery from 'lightgallery';
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
   iosVhFix();
+  const lightGallerySelector = document.getElementById('lightgallery');
+  if (lightGallerySelector) {
+    lightGallery(lightGallerySelector, {
+      plugins: [lgThumbnail],
+      selector: '.portfolio-work',
+      thumbnail: true,
+      animateThumb: false,
+      speed: 500,
+    });
+  }
 
   // Modules
   // ---------------------------------
@@ -27,11 +41,13 @@ window.addEventListener('DOMContentLoaded', () => {
     initMainNav();
     initBurgers();
     initVideo();
+    initAutoResizeTextarea();
+    initMap();
 
-    let introSwiper = document.querySelector('.intro .swiper');
-    if (introSwiper) {
+    let introHeroSwiper = document.querySelector('.section-hero .swiper');
+    if (introHeroSwiper) {
       // eslint-disable-next-line no-undef
-      introSwiper = new Swiper('.intro .swiper', {
+      introHeroSwiper = new Swiper('.section-hero .swiper', {
         slideActiveClass: 'is-active',
         grabCursor: false,
         loop: true,
@@ -50,12 +66,49 @@ window.addEventListener('DOMContentLoaded', () => {
           },
         },
         navigation: {
-          nextEl: '.intro .intro__btn.intro__btn--next',
-          prevEl: '.intro .intro__btn.intro__btn--prev',
+          nextEl: '.section-hero .section-hero__control.section-hero__control--next',
+          prevEl: '.section-hero .section-hero__control.section-hero__control--prev',
         },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
+        },
+      });
+    }
+
+    let introPortfolioOneSwiper = document.querySelector('.section.section--portfolio-one .swiper');
+    if (introPortfolioOneSwiper) {
+      // eslint-disable-next-line no-undef
+      introPortfolioOneSwiper = new Swiper('.section.section--portfolio-one .swiper', {
+        slidesPerView: 6,
+        loop: false,
+        speed: 1500,
+        autoplay: {
+          delay: 7000,
+        },
+        navigation: {
+          disabledClass: 'is-disabled',
+          nextEl: '.section.section--portfolio-one .section__control.section__control--next',
+          prevEl: '.section.section--portfolio-one .section__control.section__control--prev',
+        },
+      });
+    }
+
+    let introPortfolioTwoSwiper = document.querySelector('.section.section--portfolio-two .swiper');
+    if (introPortfolioTwoSwiper) {
+      // eslint-disable-next-line no-undef
+      introPortfolioTwoSwiper = new Swiper('.section.section--portfolio-two .swiper', {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        loop: true,
+        speed: 1500,
+        autoplay: {
+          delay: 7000,
+        },
+        navigation: {
+          disabledClass: 'is-disabled',
+          nextEl: '.section.section--portfolio-two .section__control.section__control--next',
+          prevEl: '.section.section--portfolio-two .section__control.section__control--prev',
         },
       });
     }

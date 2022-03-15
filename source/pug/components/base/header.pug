@@ -15,20 +15,21 @@ mixin header(headerMods, currentUrl)
             //- lighthouse снимает 10 баллов SEO за <a> без href
             span.header__logo.logo
               span.logo__band
-                +img("svg", "logo", "svg", 150, 74, "Московская фабрика мебели").logo__img
-                span.logo__name!= "Московская фабрика мебели"
+                img(src="/img/svg/logo-header.svg", width=150, height=74, alt="Логотип: Московская фабрика мебели").logo__figure
+                span.logo__title!= "Московская фабрика мебели"
               span.logo__subtitle!= "Швейный цех"
           else
-            a.header__logo(href="index.html", aria-label="Переход на главную").logo
+            a.header__logo.logo(href="index.html", aria-label="Переход на главную")
               span.logo__band
-                +img("svg", "logo", "svg", 150, 74, "Московская фабрика мебели").logo__img
-                span.logo__name!= "Московская фабрика мебели"
+                img(src="/img/svg/logo-header.svg", width=150, height=74, alt="Логотип: Московская фабрика мебели").logo__figure
+                span.logo__title!= "Московская фабрика мебели"
               span.logo__subtitle!= "Швейный цех"
         .header__right
-          a(href="mailto:zakaz@mfm-moscow.ru").header__phone
-            +icon("icon-mail", 15, 15)
+          a(href="mailto:zakaz@mfm-moscow.ru").header__mail.link.link--icon
+            +icon("icon-mail", 15, 15).link__icon
             span!= "zakaz@mfm-moscow.ru"
-          a(href="tel:84994724326").header__phone
-            +icon("icon-phone", 15, 15)
+          a(href="tel:84994724326").header__phone.link.link--icon
+            +icon("icon-phone", 15, 15).link__icon
             span!= "8 (499) 472-4326"
-        +main-nav('0').header__main-nav
+          +burger("Показать главное меню", "nav", "main-nav--open")(data-target-id="nav", data-target-class-toggle="main-nav--open").main-nav__toggler
+        +main-nav('0').header__main-menu

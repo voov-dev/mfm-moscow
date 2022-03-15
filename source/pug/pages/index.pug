@@ -13,14 +13,15 @@ block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +home-intro()
-    +intro-about-us()
-    +home-advantages()
-    +intro-order()
-    +intro-production()
-    +intro-working()
-    +intro-embroidery()
-    +intro-partners()
-    +contacts()
+    +section-hero()
+    +section-promo()
+    +section-order()
+    +section-portfolio-one()
+    +section-steps()
+    +section-cost-depends()
+    +section-portfolio-two()
+    +section-contacts()
 
 block modals
+  +modal("modal--request")(data-modal="request")
+    +modal-request()

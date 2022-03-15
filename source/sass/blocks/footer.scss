@@ -1,5 +1,51 @@
 .footer {
-  padding: 40px 0;
+  padding: 35px 0;
+  color: $color-default-white;
+  background-color: $color-charcoal;
 
-  background-color: $color-neon-blue;
+  &__parts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  &__part {
+    flex-grow: 1;
+    max-width: 100%;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include vp-768 {
+      max-width: calc(100% / 3);
+    }
+
+    &--right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &--right > * + * {
+      margin-left: 60px;
+    }
+
+    &--right > *:not(:last-child) {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__metrika {
+    display: inline-flex;
+    max-width: 90px;
+  }
 }

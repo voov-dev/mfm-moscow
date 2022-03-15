@@ -1,0 +1,35 @@
+mixin section-portfolio-one()
+  section.section.section--noise-green.section--portfolio-one
+    span.section__line
+    .container
+      .section__intro
+        h2.section__title.section__title--center!= "Наше производство"
+      .section__swiper-wrap
+        .swiper
+          .swiper-wrapper#lightgallery
+            .swiper-slide
+              .portfolio-work(data-src="img/slides/our-production-1.jpg")
+                +picture("slides", "our-production-1", "jpg", 167, 140, "Наше производство 1")
+            .swiper-slide
+              .portfolio-work(data-src="img/slides/our-production-2.jpg")
+                +picture("slides", "our-production-2", "jpg", 167, 140, "Наше производство 2")
+            .swiper-slide
+              .portfolio-work(data-src="img/slides/our-production-3.jpg")
+                +picture("slides", "our-production-3", "jpg", 167, 140, "Наше производство 3")
+            .swiper-slide
+              .portfolio-work(data-src="img/slides/our-production-4.jpg")
+                +picture("slides", "our-production-4", "jpg", 167, 140, "Наше производство 4")
+            .swiper-slide
+              .portfolio-work(data-src="img/slides/our-production-5.jpg")
+                +picture("slides", "our-production-5", "jpg", 167, 140, "Наше производство 5")
+            .swiper-slide
+              .portfolio-work(data-src="img/slides/our-production-6.jpg")
+                +picture("slides", "our-production-6", "jpg", 167, 140, "Наше производство 6")
+            .swiper-slide
+              .portfolio-work(data-src="img/slides/our-production-2.jpg")
+                +picture("slides", "our-production-2", "jpg", 167, 140, "Наше производство")
+        button.section__control.section__control--prev(aria-label="Показать предыдущий слайд")
+        button.section__control.section__control--next(aria-label="Показать следующий слайд")
+    span.section__line-decor
+
+

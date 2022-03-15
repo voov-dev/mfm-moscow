@@ -1,13 +1,59 @@
 .header {
-  padding: 28px 0;
+  background-color: $color-white-smoke;
 
-  background-color: $color-neon-blue;
+  &__inner {
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 
-  .container {
+  &__parts {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  &__left,
+  &__right {
+    flex-grow: 1;
+    max-width: 50%;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__right {
+    text-align: right;
+  }
+
+  &__main-menu {
+    @include vp-1024 {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+      transform: translateY(100%);
+      flex-grow: 1;
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__logo {
-    color: $color-default-white;
+    color: $color-rock-spray;
+  }
+
+  &__mail {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__phone {
+    margin-left: 80px;
+    font-weight: 700;
+    font-size: 24px;
   }
 }

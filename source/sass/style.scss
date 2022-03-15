@@ -2,8 +2,8 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 7.4.1
 @import "vendor/swiper";
+@import "vendor/lightgallery/lightgallery-bundle";
 
 // Global
 // ---------------------------------
@@ -19,11 +19,13 @@
 // Blocks
 // ---------------------------------
 
+@import "blocks/btn";
+@import "blocks/logo";
 @import "blocks/header";
+@import "blocks/link";
 @import "blocks/main-nav";
 @import "blocks/footer";
 @import "blocks/modal";
-@import "blocks/btn";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
@@ -31,7 +33,16 @@
 @import "blocks/to-top";
 @import "blocks/video";
 @import "blocks/sprite-png";
-@import "blocks/home-intro";
+@import "blocks/section";
+@import "blocks/section-hero";
+@import "blocks/promo-numbers";
+@import "blocks/advantages";
+@import "blocks/steps";
+@import "blocks/partnerships";
+@import "blocks/portfolio-work";
+@import "blocks/portfolio-partner";
+@import "blocks/form-request";
+@import "blocks/contacts";
 
 // ---------------------------------
 

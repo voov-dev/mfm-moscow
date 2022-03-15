@@ -1,30 +1,3 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_1601_2)">
-<rect x="2.98962" y="1.36816" width="20" height="2" rx="1" transform="rotate(45 2.98962 1.36816)" fill="#818181"/>
-</g>
-<g filter="url(#filter1_d_1601_2)">
-<rect width="20" height="2" rx="1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 15.0104 1.36816)" fill="#818181"/>
-</g>
-<defs>
-<filter id="filter0_d_1601_2" x="0.989624" y="0.782471" width="18.7279" height="18.7278" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="1" dy="1"/>
-<feGaussianBlur stdDeviation="1"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1601_2"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1601_2" result="shape"/>
-</filter>
-<filter id="filter1_d_1601_2" x="0.282532" y="0.782471" width="18.7279" height="18.7278" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="1" dy="1"/>
-<feGaussianBlur stdDeviation="1"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1601_2"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1601_2" result="shape"/>
-</filter>
-</defs>
+<svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.0208 0.292893C16.4113 -0.0976311 17.0445 -0.0976311 17.435 0.292893C17.8256 0.683417 17.8256 1.31658 17.435 1.70711L12.1317 7.01041L18.1421 13.0208C18.5327 13.4113 18.5327 14.0445 18.1421 14.435C17.7516 14.8256 17.1184 14.8256 16.7279 14.435L10.7175 8.42462L4.70711 14.435C4.31658 14.8256 3.68342 14.8256 3.29289 14.435C2.90237 14.0445 2.90237 13.4113 3.29289 13.0208L9.3033 7.01041L4 1.70711C3.60948 1.31658 3.60948 0.683417 4 0.292893C4.39053 -0.0976311 5.02369 -0.0976311 5.41422 0.292893L10.7175 5.59619L16.0208 0.292893Z" fill="#818181"/>
 </svg>

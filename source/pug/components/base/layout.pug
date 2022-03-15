@@ -4,7 +4,7 @@ include ../components
 
 block variables
 
-html(lang="ru")
+html(lang="ru").no-js
   head
     title= title
     meta(charset="utf-8")
@@ -13,7 +13,9 @@ html(lang="ru")
     meta(name="description", content="ProjectName — описание")
     //- генерируйте favicon тут - https://realfavicongenerator.net/
     //- в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"
-
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap' rel='stylesheet')
     //- используйте только для шрифта находящегося на первом экране
     //- link(rel="preload", href="fonts/placeholder.woff2", as="font", crossorigin="anonymous")
     link(rel="stylesheet", href="css/style.min.css")

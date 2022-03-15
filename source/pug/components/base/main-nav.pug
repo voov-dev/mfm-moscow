@@ -81,8 +81,7 @@ mixin main-nav(selectedID)
     ];
 
   nav.main-nav#nav&attributes(attributes)
-    +burger("Показать главное меню", "nav", "main-nav--open")(data-target-id="nav", data-target-class-toggle="main-nav--open").main-nav__toggler
-    ul.main-nav__list
+    ul.main-nav__list.main-nav__list--lvl-1
       each menuItem in mainMenu
         +main-nav-item(selectedID, menuItem, 1)
           if (typeof (menuItem.childs) !== 'undefined' && menuItem.childs)

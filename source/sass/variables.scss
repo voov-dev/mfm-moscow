@@ -8,6 +8,10 @@ $color-coral-red: #ec4545;
 $color-nero: #222222;
 $color-charcoal: #444444;
 $color-gray: #818181;
+$color-whisper: #e5e5e5;
+$color-silver: #c4c4c4;
+$color-white-smoke: #f4f4f4;
+$color-charcoal: #444444;
 $color-dim-gray: #676767;
 $color-very-light-grey: #cccccc;
 $color-default-black: $color-nero;
@@ -18,7 +22,7 @@ $color-transparent: rgba(255, 255, 255, 0);
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-neon-blue: #2c39f2;
-$color-torch-red: #ff1553;
+$color-torch-red: $color-coral-red;
 
 // Gradient
 
@@ -38,7 +42,7 @@ $fz-default: 16px;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble: "Rouble", "Arial", sans-serif;
 
-$ff-placeholder: "Placeholder", "Arial", sans-serif;
+$ff-placeholder: "Roboto", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -56,6 +60,7 @@ $trans-600: 0.6s $tf-default;
 
 $vp-320: 320px;
 $vp-375: 375px;
+$vp-576: 576px;
 $vp-768: 768px;
 $vp-1024: 1024px;
 $vp-1280: 1280px;

@@ -1,0 +1,21 @@
+mixin form-request()
+  .form-request(data-validate)&attributes(attributes)
+    form(method="post").form-request__form
+      +custom-input({
+        inputPlaceholder: "Введите ваше имя",
+        inputError: "Не корректное имя",
+        inputName: "user-name",
+        inputMinLength: "2"
+      })(data-validate-type="text", data-limitations="letters").form-request__custom-input
+      +custom-input({
+        inputPlaceholder: "Введите ваш телефон",
+        inputError: "Не корректный телефон",
+        inputName: "user-phone"
+      })(data-validate-type="phone").form-request__custom-input
+      +custom-toggle({
+        inputLabel: "Даю согласие,на обработку персональных данных",
+        inputError: "Поле является обязательным",
+        inputName: "user-agreement",
+        inputChecked: true
+      })(data-validate-type="checkbox").custom-toggle--checkbox.form-request__custom-toggle
+      +btn({text: "Оставить заявку", type: "submit"}).form-request__btn

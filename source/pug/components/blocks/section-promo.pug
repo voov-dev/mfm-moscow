@@ -1,0 +1,45 @@
+mixin section-promo()
+  section.section.section--promo
+    .container
+      .section__intro
+        h2.section__title.section__title--center!= "Компьютерная вышивка по индивидуальному дизайну"
+      .section__parts
+        .section__left
+          +video("Dp-f-4W7Ie4")
+            +picture("content", "video", "jpg", 538, 345, "Наше производство 2").video__media
+        .section__right.section__content
+          p!= "«Московская Фабрика Мебели» (МФМ) предоставляет услуги по нанесению логотипов и других изображений при помощи компьютерной вышивки на любые ткани."
+          p!= "Вышивка – это уникальный способ сделать ваше изделие индивидуальным, узнаваемым. С помощью компьютерной вышивки мы можем создавать любые по сложности рисунки. Мы используем современное японское оборудование."
+          ul.section__promo-numbers.promo-numbers
+            li.promo-numbers__part.promo-numbers__part--wide
+              p.promo-numbers__title!= "300 х 50 см"
+              p.promo-numbers__text!= "размер наносимого изображения"
+            li.promo-numbers__part
+              p.promo-numbers__title!= "1000"
+              p.promo-numbers__text!= "стежков в минуту"
+            li.promo-numbers__part.promo-numbers__part--cut-off
+              p.promo-numbers__title!= "500"
+              p.promo-numbers__text!= "экземпляров за рабочую смену"
+      ul.section__advantages.advantages
+        li.advantages__item
+          span.advantages__icon-wrap
+            span.advantages__icon.sprite-icon.sprite-icon-1
+          h3.advantages__heading!= "Долговечность"
+        li.advantages__item
+          span.advantages__icon-wrap
+            span.advantages__icon.sprite-icon.sprite-icon-2
+          h3.advantages__heading!= "Качественные материалы"
+        li.advantages__item
+          span.advantages__icon-wrap
+            span.advantages__icon.sprite-icon.sprite-icon-3
+          h3.advantages__heading!= "Современное оборудование"
+        li.advantages__item
+          span.advantages__icon-wrap
+            span.advantages__icon.sprite-icon.sprite-icon-4
+          h3.advantages__heading!= "Индивидуальный пошив"
+        li.advantages__item
+          span.advantages__icon-wrap
+            span.advantages__icon.sprite-icon.sprite-icon-5
+          h3.advantages__heading!= "10 лет на рынке"
+
+

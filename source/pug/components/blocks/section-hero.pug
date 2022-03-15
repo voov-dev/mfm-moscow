@@ -1,0 +1,29 @@
+mixin section-hero()
+  section.section-hero
+    h2.visually-hidden!= "Слайдер с Баннерами"
+    .section-hero__swiper.swiper
+      .swiper-wrapper
+        .swiper-slide.section-hero__slide
+          +picture("slides", "banner", "jpg", 1920, 800, "Нанесение логотипов и изображений при помощи компьютерной вышивки на любые ткани").section-hero__slide-picture
+          .container
+            .section-hero__slide-content
+              h2.title.section-hero__slide-title!= "Нанесение логотипов и изображений при помощи компьютерной вышивки на любые ткани"
+              +btn({text: "Оставить заявку"})(data-open-modal="request").section-hero__slide-btn
+        .swiper-slide.section-hero__slide
+          +picture("slides", "banner", "jpg", 1920, 800, "Нанесение логотипов и изображений при помощи компьютерной вышивки на любые ткани").section-hero__slide-picture
+          .container
+            .section-hero__slide-content
+              h2.title.section-hero__slide-title!= "Нанесение логотипов и изображений при помощи компьютерной вышивки на любые ткани"
+              +btn({text: "Оставить заявку"})(data-open-modal="request").section-hero__slide-btn
+        .swiper-slide.section-hero__slide
+          +picture("slides", "banner", "jpg", 1920, 800, "Нанесение логотипов и изображений при помощи компьютерной вышивки на любые ткани").section-hero__slide-picture
+          .container
+            .section-hero__slide-content
+              h2.title.section-hero__slide-title!= "Нанесение логотипов и изображений при помощи компьютерной вышивки на любые ткани"
+              +btn({text: "Оставить заявку"})(data-open-modal="request").section-hero__slide-btn
+      .section-hero__controls
+        button.section-hero__control.section-hero__control--prev
+          +icon("icon-left-long", 15, 15).section-hero__control-icon
+        .section-hero__pagination.swiper-pagination
+        button.section-hero__control.section-hero__control--next
+          +icon("icon-right-long", 15, 15).section-hero__control-icon
