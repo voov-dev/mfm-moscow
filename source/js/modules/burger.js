@@ -1,5 +1,8 @@
+import {ScrollLock} from '../utils/scroll-lock';
+
 export const initBurgers = () => {
   let burgers = document.querySelectorAll('.burger');
+  let burgersScrollLock = new ScrollLock();
 
   for (let i = 0; i < burgers.length; i++) {
     let burger = burgers[i];
@@ -13,6 +16,12 @@ export const initBurgers = () => {
     if (targetId && targetClassToggle) {
       this.classList.toggle('burger--close');
       document.getElementById(targetId).classList.toggle(targetClassToggle);
+
+      if (this.classList.contains('burger--close')) {
+        burgersScrollLock.disableScrolling();
+      } else {
+        burgersScrollLock.enableScrolling();
+      }
     }
   }
 };

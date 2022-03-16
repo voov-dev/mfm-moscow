@@ -6,25 +6,44 @@
   list-style: none;
   counter-reset: step;
 
+  @include vp-767 {
+    max-width: 470px;
+    margin: 0 auto;
+  }
+
   &__item {
     position: relative;
     flex-grow: 1;
-    max-width: calc(100% / 3);
+    max-width: 100%;
     width: 100%;
     margin-bottom: 40px;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    @include vp-768 {
+      max-width: calc(100% / 2);
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+
+    @include vp-1024 {
+      max-width: calc(100% / 3);
+    }
   }
 
   &__box {
     position: relative;
     display: flex;
-    min-height: 175px;
+    min-height: 125px;
     max-height: 100%;
     background-color: $color-default-white;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+
+    @include vp-768 {
+      min-height: 175px;
+    }
 
     &::before {
       position: absolute;
@@ -34,9 +53,13 @@
       counter-increment: step;
       content: "0" counter(step);
       font-weight: 900;
-      font-size: 144px;
+      font-size: 115px;
       line-height: 1;
       color: $color-white-smoke;
+
+      @include vp-576 {
+        font-size: 144px;
+      }
     }
   }
 
@@ -59,10 +82,15 @@
   &__content {
     max-width: calc(100% - 110px);
     width: 100%;
-    padding: 25px 15px 25px 5px;
+    padding: 15px 10px 15px 5px;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.53;
+
+    @include vp-576 {
+      padding: 25px 15px 25px 5px;
+      font-size: 15px;
+    }
 
     > p {
       margin: 0;

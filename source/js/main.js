@@ -80,11 +80,28 @@ window.addEventListener('DOMContentLoaded', () => {
     if (introPortfolioOneSwiper) {
       // eslint-disable-next-line no-undef
       introPortfolioOneSwiper = new Swiper('.section.section--portfolio-one .swiper', {
-        slidesPerView: 6,
+        slidesPerView: 1,
         loop: false,
-        speed: 1500,
+        speed: 500,
         autoplay: {
-          delay: 7000,
+          delay: 15000,
+        },
+        breakpoints: {
+          480: {
+            slidesPerView: 2,
+          },
+          680: {
+            slidesPerView: 3,
+          },
+          968: {
+            slidesPerView: 4,
+          },
+          1023: {
+            slidesPerView: 5,
+          },
+          1200: {
+            slidesPerView: 6,
+          },
         },
         navigation: {
           disabledClass: 'is-disabled',
@@ -98,12 +115,26 @@ window.addEventListener('DOMContentLoaded', () => {
     if (introPortfolioTwoSwiper) {
       // eslint-disable-next-line no-undef
       introPortfolioTwoSwiper = new Swiper('.section.section--portfolio-two .swiper', {
-        slidesPerView: 5,
+        slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
-        speed: 1500,
+        speed: 500,
         autoplay: {
-          delay: 7000,
+          delay: 12000,
+        },
+        breakpoints: {
+          480: {
+            slidesPerView: 2,
+          },
+          680: {
+            slidesPerView: 3,
+          },
+          968: {
+            slidesPerView: 4,
+          },
+          1140: {
+            slidesPerView: 5,
+          },
         },
         navigation: {
           disabledClass: 'is-disabled',

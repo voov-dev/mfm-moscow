@@ -46,47 +46,88 @@
   &__slide-content {
     position: relative;
     z-index: 10;
-    padding: 195px 0 140px;
+    padding: 85px 0 75px;
     max-width: 700px;
+
+    @include vp-576 {
+      padding-top: 105px;
+      padding-bottom: 85px;
+    }
+
+    @include vp-768 {
+      padding-top: 135px;
+      padding-bottom: 105px;
+    }
+
+    @include vp-1024 {
+      padding-top: 195px;
+      padding-bottom: 140px;
+    }
   }
 
   &__slide-title {
     margin: 0;
-    font-size: 55px;
+    font-size: 28px;
     line-height: 1.33;
     color: $color-default-white;
+
+    @include vp-576 {
+      font-size: 34px;
+    }
+
+    @include vp-768 {
+      font-size: 44px;
+    }
+
+    @include vp-1024 {
+      font-size: 55px;
+    }
   }
 
   &__slide-title + * {
-    margin-top: 35px;
+    margin-top: 25px;
+
+    @include vp-1024 {
+      margin-top: 35px;
+    }
   }
 
   &__slide-title + &__slide-btn:first-of-type {
-    margin-top: 100px;
+    margin-top: 35px;
+
+    @include vp-1024 {
+      margin-top: 100px;
+    }
   }
 
   &__slide-btn {
     margin-right: 35px;
     margin-bottom: 10px;
-    //opacity: 0;
+  }
+
+  &__slide:not(.is-active) {
+    #{$block-name}__slide-btn,
+    #{$block-name}__slide-title {
+      opacity: 0;
+    }
   }
 
   &__slide.is-active {
-    //&::before {
-    //  background-color: transparent;
-    //}
+    &::before {
+      background-color: transparent;
+    }
 
-    //#{$block-name}__slide-title {
-    //  opacity: 1;
-    //  animation: reveal 1.15s cubic-bezier(0.215, 0.61, 0.355, 1) 0.55s
-    //    backwards;
-    //}
-    //
-    //#{$block-name}__slide-btn {
-    //  opacity: 1;
-    //  animation: reveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.35s backwards;
-    //  animation-delay: 1.35s;
-    //}
+    #{$block-name}__slide-title {
+      opacity: 1;
+      animation: reveal 1.15s cubic-bezier(0.215, 0.61, 0.355, 1) 0.55s
+        backwards;
+    }
+
+    #{$block-name}__slide-btn {
+      opacity: 1;
+      animation: reveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.35s backwards;
+      animation-delay: 1.35s;
+    }
   }
 
   &__pagination {

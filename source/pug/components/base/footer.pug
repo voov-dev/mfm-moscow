@@ -15,16 +15,16 @@ mixin footer(footerMods)
             //- lighthouse снимает 10 баллов SEO за <a> без href
             span.footer__logo.logo
               span.logo__band
-                img(src="/img/svg/logo-footer.svg", width=150, height=74, alt="Логотип: Московская фабрика мебели").logo__figure
+                img(src="img/svg/logo-footer.svg", width=150, height=74, alt="Логотип: Московская фабрика мебели").logo__figure
                 span.logo__title!= "Московская фабрика мебели"
               span.logo__subtitle!= "Швейный цех"
           else
             a.footer__logo.logo(href="index.html", aria-label="Переход на главную")
               span.logo__band
-                img(src="/img/svg/logo-footer.svg", width=150, height=74, alt="Логотип: Московская фабрика мебели").logo__figure
+                img(src="img/svg/logo-footer.svg", width=150, height=74, alt="Логотип: Московская фабрика мебели").logo__figure
                 span.logo__title!= "Московская фабрика мебели"
               span.logo__subtitle!= "Швейный цех"
-        .footer__part
+        .footer__part.footer__part--modal
           +btn({text: "Написать нам"})(data-open-modal="request").btn--shirink.footer__btn
         .footer__part.footer__part--right
           .footer__metrika

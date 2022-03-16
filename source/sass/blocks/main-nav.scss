@@ -10,9 +10,9 @@
       top: 0;
       left: 0;
       z-index: 150;
-      min-width: 320px;
+      min-width: 275px;
       max-width: 420px;
-      width: 100vw;
+      width: calc(100% - 60px);
       min-height: 100vh;
       /* stylelint-disable-next-line */
       min-height: calc(100 * var(--vh, 1vh));
@@ -23,6 +23,13 @@
       pointer-events: none;
       transform: translateX(-100%);
       transition: transform 300ms linear;
+    }
+
+    &__link {
+      padding: 0.65em .5em;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
     }
 
     .js &--open {
@@ -148,12 +155,15 @@
     text-decoration: none;
     color: $color-coral-red;
     background-color: $color-nero;
+    outline: none;
 
-    &:hover,
-    &:focus {
-      z-index: 1;
-      text-decoration: none;
-      background-color: $color-charcoal;
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        z-index: 1;
+        text-decoration: none;
+        background-color: $color-charcoal;
+      }
     }
 
     &--lvl-2 {
@@ -216,23 +226,6 @@
         }
         // stylelint-enable
       }
-    }
-  }
-
-  // переключатель
-
-  &__toggler {
-    display: inline-block;
-    border: none;
-    padding: 0;
-    background: none;
-
-    @media (min-width: $menu-desktop-width) {
-      display: none;
-    }
-
-    .no-js & {
-      display: none;
     }
   }
 }

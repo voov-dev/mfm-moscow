@@ -7,6 +7,10 @@
   list-style: none;
   color: $color-nero;
 
+  @include vp-767 {
+    justify-content: space-around;
+  }
+
   @include vp-1024 {
     padding-right: 20px;
     padding-left: 20px;
@@ -23,17 +27,21 @@
     padding-right: 15px;
     padding-left: 15px;
 
-    @include vp-768 {
+    @include vp-576 {
       flex-wrap: wrap;
       align-items: flex-start;
       align-content: flex-start;
+      max-width: calc(100% / 3);
+    }
+
+    @include vp-768 {
       max-width: calc(100% / 5);
     }
   }
 
 
   &__icon {
-    @include vp-767 {
+    @include vp-575 {
       transform: scale(0.5);
     }
   }
@@ -47,10 +55,15 @@
     border: 1px solid $color-silver;
     border-radius: 50%;
 
+    @include vp-576 {
+      width: 95px;
+      height: 95px;
+      margin: 0 auto;
+    }
+
     @include vp-768 {
       width: 123px;
       height: 123px;
-      margin: 0 auto;
     }
   }
 
@@ -59,14 +72,18 @@
     width: 100%;
     margin: 0;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.17;
     padding: 0 15px;
 
-    @include vp-768 {
+    @include vp-576 {
       max-width: 100%;
       margin-top: 30px;
       text-align: center;
+    }
+
+    @include vp-1024 {
+      font-size: 18px;
     }
   }
 }
